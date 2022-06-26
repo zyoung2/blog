@@ -36,6 +36,7 @@ function createNumbers(){
            lottoNumbers.push(randomNumber)
        }
     }
+    lottoNumbers.sort();
     displayNumbers(lottoNumbers)
 }
 $(document).ready(function(){
