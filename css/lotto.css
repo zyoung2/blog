@@ -6,8 +6,8 @@ h1{
     align-items: center;
 }
 button{
-    font-size: 36px; width: 120px;
-    height: 140px; margin-left: 20px; color: white;
+    font-size: 30px; width: 15%;
+    margin-left: 20px; color: white;
     background-color: teal; border: none;
     border-radius: 10px;
 }
@@ -16,14 +16,14 @@ button:active, button:focus{
 }
 /* 추첨된 번호 여섯개가 보이는 영역 */
 .result{
- display: flex; width: 770px; height: 140px;
+ display: flex; width: 80%; height: 80%;
  padding: 20px; box-sizing: border-box;
  border: 1px solid black; border-radius:  10px;
 }
 /* .result 안에 들어간 번호(당구공) 하나하나 */
 .result > div{
     display: flex; justify-content: center; align-items: center;
-    width: 100px; height: 100px; margin: 0 10px;
-    border-radius: 50%; font-size: 36px; color: white;
+    width: 50px; height: 50px; margin: 0 5px;
+    border-radius: 50%; font-size: 30px; color: white;
     font-weight: 900;
 }
