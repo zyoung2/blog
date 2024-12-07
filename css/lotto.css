@@ -16,14 +16,17 @@ button:active, button:focus{
 }
 /* 추첨된 번호 여섯개가 보이는 영역 */
 .result{
- display: flex; width: 80%; height: 80%;
- padding: 20px; box-sizing: border-box;
+ display: flex; height: 80%;
+ /*width: 80%; padding: 20px; */
+ padding: 20px 0 20px 0;
+ box-sizing: border-box;
  border: 1px solid black; border-radius:  10px;
 }
 /* .result 안에 들어간 번호(당구공) 하나하나 */
 .result > div{
     display: flex; justify-content: center; align-items: center;
     width: 50px; height: 50px; margin: 0 5px;
+    min-width: 50px;
     border-radius: 50%; font-size: 30px; color: white;
     font-weight: 900;
 }
