@@ -1,14 +1,14 @@
 // 주어진 정수의 값에 따라서 다른 색깔을 반환하자
 function getColor(number){
-    let color = "orange"; // 10 미만
-    if(number >=10 && number < 20){
-        color = "green"
-    }else if(number >=20 && number < 30){
-        color = "blue"
-    }else if(number >=30 && number < 40){
-        color = "red"
-    }else if(number >=40 && number < 50){
-        color = "purple"
+    let color = "#fbc400"; // 10 미만
+    if(number > 10 && number <= 20){
+        color = "#69c8f2"
+    }else if(number > 20 && number <= 30){
+        color = "#ff7272"
+    }else if(number > 30 && number <= 40){
+        color = "#aaa"
+    }else if(number > 40 && number <= 50){
+        color = "#b0d840"
     }
     return color;
 }
