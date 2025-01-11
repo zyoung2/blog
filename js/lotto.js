@@ -15,15 +15,16 @@ function getColor(number){
 // 숫자 여섯개 당구공을 생성하여 문서에 뿌려준다!
 function displayNumbers(lotto){
     // 원래 보이던 당구공들은 제거하고 시작!
-    $(".result").empty();
+    const span = $("<div></div>");
     for(let i =0; i < 6; i++){
         const div = $("<div></div>") // 제이쿼리판 createElement
         $(div).text(`${lotto[i]}`)
         $(div).hide(); // 안 보이는 상태에서 추가하기
         $(div).css("background-color", getColor(lotto[i]))
-        $(".result").append(div)
+	$(span).append(div);
+        $(".result").append(span)
     }
-    $(".result > div").fadeIn(1000); // 1초 동안 스르륵 등장!
+    $(".result >div > div").fadeIn(1000); // 1초 동안 스르륵 등장!
 }
 // 1부터 45 사이의 숫자 중 여섯개로 골라줘라!(무작위로)
 function createNumbers(){
@@ -37,15 +38,18 @@ function createNumbers(){
        }
     }
     lottoNumbers.sort(function(a, b)  {
-	    if(a > b) return 1;
- 	    if(a === b) return 0;
-	    if(a < b) return -1;
+	if(a > b) return 1;
+ 	if(a === b) return 0;
+	if(a < b) return -1;
     });
     displayNumbers(lottoNumbers)
 }
 $(document).ready(function(){
     // 버튼을 눌렀을 때 번호가 추첨되도록 이벤트 등록
     $("button").click(function(){
-       createNumbers()
+    $(".result").empty();
+	for(var i=0; i < 5; i++){
+	       createNumbers()
+	}
     })
 })
